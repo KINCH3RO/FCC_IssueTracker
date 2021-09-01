@@ -108,7 +108,7 @@ module.exports = function (app) {
         delete issue._id
         getModel(project).findByIdAndUpdate(selectedId, issue, function (err, updatedIssue) {
           if (updatedIssue) {
-            console.log(updatedIssue);
+           
             res.json({ result: 'successfully updated', '_id': selectedId })
           } else {
            
